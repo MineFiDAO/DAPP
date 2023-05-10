@@ -1,0 +1,133 @@
+.nav_main .nav_item.active .nav_icon.home {
+    background-image: url('../images/icon-home-s.png');
+}
+
+.nav_main .nav_item .nav_icon.home {
+    background-image: url('../images/icon-home-d.png');
+}
+
+.loadlisttips {
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    color: #838383;
+}
+
+.pointer,
+.btncopy {
+    cursor: pointer;
+}
+
+/*表格样式 start*/
+
+.tb-group {
+    text-align: center;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.tb-group td {
+    text-align: center;
+}
+
+.tb-group .nft-pic {
+    width: auto;
+    height: 40px;
+    object-fit: cover;
+}
+
+.tb-item {
+    min-width: 100%;
+    white-space: nowrap;
+}
+
+.tb-item :nth-child(2n+1) .tb-value {
+    background: #f1f1f1;
+}
+
+.tb-item.tb-title-th .tb-value {
+    height: 34px;
+    background: #2973ff;
+    color: #fff;
+    font-weight: normal;
+    padding: 6px 0;
+}
+
+.tb-value {
+    white-space: normal;
+    word-break: break-all;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.tb-item .eventr .tb-value {
+    background: #ffffff;
+}
+
+.tb-item .oddtr .tb-value {
+    background: #f1f1f1;
+}
+
+.tb-value a {
+    color: #2973ff;
+    text-decoration: underline;
+}
+
+/*表格样式 start*/
+
+
+.caddr {
+    color: red;
+    text-decoration-line: underline;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.van-nav-bar .van-icon {
+    color: #838383;
+    font-size: 18px;
+}
+
+/**/
+.cell-item {
+    flex-wrap: wrap;
+}
+
+.cell-value {
+    word-break: break-all;
+}
+
+/*常用字体大小*/
+.txtmin {
+    font-size: 12px;
+}
+
+.txtleft {
+    text-align: left !important;
+}
+
+.txtbold {
+    font-weight: bold;
+}
+
+.txtred {
+    color: red !important;
+}
+
+.addrsize {
+    font-size: 12px;
+    padding: 10px 0px;
+}
+
+.ellipsistxt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    color: #2973ff;
+    text-decoration: underline;
+}

@@ -1,0 +1,110 @@
+var ethers = require('ethers')
+import { Dialog } from 'vant'
+import store from '@/store'
+import vui from '@/uicommon'
+import { getLoginToken, reqlogin, getSignData, getChain } from "@/utils/loginapi"
+
+
+var curChain = getChain()
+
+function conwallt() {
+    curChain = getChain()
+    return new Promise((resolve) => {
+        if (!window.isBitKeep) {
+            alert("请安装BitKeep钱包后再登录")
+            return
+        } else {
+            if (store.state.user.isLogon) {
+                //在登录的情况下，检查当前账号和钱包连接账号是否一致，同时主网的网络是否正确
+                getWalletInfo().then((waddr) => {
+                    var loginAddr = store.state.user.userInfo.addr
+                    if (waddr.toLowerCase() != loginAddr.toLowerCase() || window.ethereum.networkVersion != parseInt(curChain.chainId)) {
+                        Dialog.alert({
+                            message: '钱包信息不一致钱包信息变化，请重新连接',
+                            className: 'mydialog'
+                        }).then(() => {
+                            store.dispatch('user/userLogout')
+                            setTimeout(() => {
+                                window.location.reload()
+                            }, 1 * 1000);
+                        })
+                    } else {
+                        resolve()
+                    }
+                })
+            } else {
+                swithnetwork().then(() => {
+                    getWalletInfo().then((waddr) => {
+                        getLoginToken(waddr).then((token) => {
+                            var signData = getSignData(token)
+                            sign(signData.msg, waddr).then(res => {
+                                console.log("success")
+                                reqlogin(waddr, signData.hash, res).then(() => {
+                                    resolve()
+                                })
+                            }).catch(err => {
+                                vui.errMsg('sign fail')
+                                console.log(err)
+                            })
+                        })
+                    })
+                })
+
+            }
+        }
+
+    });
+}
+
+function swithnetwork() {
+    var p = new Promise((reslove, error) => {
+        if (window.ethereum.chainId != curChain.chainId) {
+            window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: curChain.chainId }],
+            }).then(() => {
+                reslove()
+            }).catch((res) => {
+                console.log(res)
+                if (res && res.code == 4902) {
+                    window.ethereum.request({
+                        method: 'wallet_addEthereumChain',
+                        params: [curChain],
+                    }).then(() => {
+                        reslove()
+                    })
+                } else {
+                    error()
+                }
+            })
+        } else {
+            reslove()
+        }
+    })
+    return p
+}
+
+function getWalletInfo() {
+    var pvd = getProvider()
+    return new Promise(r => {
+        pvd.send('eth_requestAccounts', []).then(accounts => {
+            if (accounts && accounts.length > 0) {
+                r(accounts[0])
+            }
+        })
+    })
+}
+
+function sign(msg, from) {
+    return window.ethereum.request({
+        method: 'personal_sign',
+        params: [msg, from]
+    })
+}
+
+function getProvider() {
+    return new ethers.providers.Web3Provider(window.ethereum)
+}
+
+
+export default { conwallt, getProvider }

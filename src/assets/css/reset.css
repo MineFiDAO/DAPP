@@ -1,0 +1,131 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-color: #f1f1f1;
+	font-family:"Helvetica Neue",Helvetica,"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+	font-weight:400;
+	font-size:14px; 
+	color:#333;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+ol,ul,li {
+	list-style:none;
+}
+blockquote,q {
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:'';
+	content:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+th,td {
+	vertical-align:middle;
+}
+.clearfix:before,
+.clearfix:after{
+	content: '';
+	display: inline-block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix{
+	clear: both;
+	*zoom:1;
+}
+/* custom */
+a {
+	outline:none;
+	color:#16418a;
+	text-decoration:none;
+    backface-visibility:hidden;
+	-webkit-backface-visibility:hidden;
+}
+a:focus {
+	outline:none;
+}
+video{
+    outline: none;
+}
+input:focus,select:focus,textarea:focus {
+	outline:-webkit-focus-ring-color auto 0;
+}
+.app{
+	min-height: 100vh;
+	background-color: #fff;
+}
+.nav_wrap{
+    width: 100%;
+    padding: 10px 0;
+    background: #fff;
+    border-top: 1px solid #f1f1f1;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+	z-index: 9;
+}
+.nav_main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav_main .nav_item{
+    flex: 1;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    cursor: pointer;
+}
+.nav_main .nav_item.active{
+    color: #0059ff;
+}
+.nav_main .nav_item .nav_icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+}
+.nav_main .nav_item .nav_icon.store{
+    background-image: url('../images/icon-store-d.png');
+}
+.nav_main .nav_item .nav_icon.fund{
+    background-image: url('../images/icon-fund-d.png');
+}
+.nav_main .nav_item.active .nav_icon.store{
+    background-image: url('../images/icon-store-s.png');
+}
+.nav_main .nav_item.active .nav_icon.fund{
+    background-image: url('../images/icon-fund-s.png');
+}
+.nav_main .nav_item .nav_text{
+   color: inherit;
+}
+@media screen and (min-width:600px) {
+    body{
+        width: 600px;
+        margin: 0 auto;
+    }
+    .app .nav_wrap,
+    .app .btn-wrap,
+    .app .dialog-content{
+        width: 600px;
+    }
+    .app .nav_wrap,
+    .app .btn-wrap{
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}

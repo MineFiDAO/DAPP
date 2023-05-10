@@ -1,0 +1,206 @@
+.goods-item:first-child{
+    border: none;
+}
+.cell-title{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.cell-item:last-child{
+    padding-top: 0; 
+    border-top: none;
+}
+.cell-item:nth-last-child(-n+2){
+    color: inherit;
+    font-weight: inherit;
+}
+.payways .cell-item{
+    padding: 20px;
+    border: 2px solid #f1f1f1;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.payways .cell-item.on{
+    border-color: #0059ff;
+}
+.payways .cell-item.on::after{
+    display: block;
+    content: '选中';
+    padding: 4px 8px;
+    background: #0059ff;
+    border-radius: 0 0 0 8px;
+    font-size: 10px;
+    color: #eee;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.numberbox{
+    display: inline-block;
+    font-size: 0;
+}
+.numberbox-reduce,
+.numberbox-plus{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #0059ff;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+}
+.numberbox-num{
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    margin: 0 4px;
+    background: #f3f4f6;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    user-select: none;
+    vertical-align: middle;
+}
+.numberbox-reduce::before,
+.numberbox-plus::before,
+.numberbox-plus::after{
+    display: block;
+    content: '';
+    background: #fff;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.numberbox-reduce::before,
+.numberbox-plus::before{
+    width: 50%;
+    height: 2px;
+}
+.numberbox-plus::after{
+    width: 2px;
+    height: 50%;
+}
+.numberbox-reduce.disable,
+.numberbox-plus.disable{
+    background: #f7f8fa;
+    cursor: not-allowed;
+}
+.numberbox-reduce.disable::before,
+.numberbox-plus.disable::before,
+.numberbox-plus.disable::after{
+    background: #c9cacc;
+}
+
+.btn-wrap{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+}
+.btn-container{
+    margin: 0 12px;
+    padding: 12px 20px;
+    background: #0059ff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-container .price{
+   font-size: 18px;
+   font-weight: 700;
+}
+.agreement{
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    margin: 0 12px;
+}
+.agreement-text{
+    margin-left: 10px;
+}
+.color-blue{
+    color: #0059ff;
+}
+.checkbox{
+    width: 16px;
+    height: 16px;
+    border: 1px solid #0059ff;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+.checkbox.on::after{
+    display: block;
+    content: '';
+    width: 90%;
+    height: 90%;
+    background: #0059ff;
+    border-radius: 4px;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.dialog-wrap{
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.6);
+    position: fixed;
+	top: 0;
+	left:0;
+	z-index: 0;
+	transition: 0.3s;
+	opacity:0;
+	visibility:hidden;
+}
+.dialog-wrap.show{
+	opacity:1;
+	visibility:visible;
+	z-index: 99;
+}
+.dialog-content{
+    width: 90%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.dialog-title{
+    font-size: 20px;
+    font-weight: 800;
+	text-align:center;
+}
+.dialog-container{
+    padding: 30px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align:center;
+}
+.dialog-btn{
+    display: flex;
+    justify-content: space-around;
+}
+.btn-item{
+    flex: 1;
+    padding: 16px 0;
+    color: #666;
+    text-align:center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn-blue{
+    flex: 0 0 60%;
+    background: #0059ff;
+    color: #fff;
+}

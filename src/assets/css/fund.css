@@ -1,0 +1,169 @@
+.page-top{
+    background-color: #0059ff;
+    padding-bottom: 30px;
+}
+.userinfo{
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+.userpic{
+    margin-bottom: 20px;
+}
+.headpic{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.userinfo .txt{
+    margin: 20px 0;
+}
+.my-btn{
+    display: inline-block;
+    padding: 12px 18px;
+    background: #fff;
+    border-radius: 8px;
+    color: #666;
+    cursor: pointer;
+}
+.income-wrap{
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.income-left{
+    flex: 1;
+    padding: 0 20px;
+    color: #fff;
+}
+.income-right{
+    flex: 0 0 96px;
+    padding: 10px 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px 0 0 12px;
+}
+.income-wrap .title{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.income-wrap .money{
+    margin-bottom: 10px;
+    color: #25ce80;
+    font-size: 18px;
+    font-weight: 700;
+}
+.income-wrap .txt{
+    margin-bottom: 20px;
+}
+.income-wrap .income-left .txt{
+   word-break: break-all;
+}
+.income-wrap .income-right .txt{
+    margin-bottom: 10px;
+ }
+.income-right .my-btn{
+    background-color: #0059ff;
+    color: #fff;
+}
+.my-btn-large{
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.my-table{
+    padding-bottom: 10px;
+    background: #fff;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    top: -10px;
+}
+.my-table-nav{
+    display: flex;
+}
+.my-table-nav .table-nav-item{
+    flex: 1;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.my-table-nav .table-nav-item:after{
+    display: block;
+    content: '';
+    width: 20%;
+    height: 4px;
+    background: #fff;
+    border-radius: 8px;
+    transition: 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translate(-50%,0);
+}
+.my-table-nav .table-nav-item.active{
+    color: #000;
+    font-weight: 700;
+}
+.my-table-nav .table-nav-item.active:after{
+    background: #0059ff;
+}
+.my-table-content{
+    margin: 0 10px;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    overflow: auto;
+}
+.table-list{
+    max-height: 410px;
+    text-align: center;
+    overflow: auto;
+}
+.table-list .nft-pic{
+    width: 80px;
+    height: 40px;
+    object-fit: cover;
+}
+.table-list-item{
+    display: inline-block;
+    min-width: 100%;
+    white-space: nowrap;
+}
+.table-list-item:nth-child(2n+1){
+    background: #f1f1f1;
+}
+.table-list-item.table-title-item{
+    background: #2973ff;
+    color: #fff;
+    padding: 6px 0;
+}
+.list-item-value{
+    display: inline-block;
+    width: 100px;
+    white-space: normal;
+    padding: 10px;
+    vertical-align: middle;
+    /* text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
+}
+.table-pagination{
+    padding-top: 20px;
+}
+.page-footer{
+    padding: 20px 0;
+    padding-bottom: 87px;
+    background: #fff;
+    color: #999;
+    text-align: center;
+}
+.contact{
+    margin-bottom: 10px;
+}
+.contact .tel{
+    color: inherit;
+}

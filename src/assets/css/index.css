@@ -1,0 +1,17 @@
+.blockitem .index_a{
+   margin-bottom: 15px;
+}
+
+.blockitem .index_q{
+   font-weight: 800;
+   cursor: pointer;
+   margin-top: 5px;
+}
+ .container {
+   padding: 20px 12px;
+}
+.index_title{
+   font-weight: 800;
+   margin-bottom: 5px;
+   font-size:18px
+ }

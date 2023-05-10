@@ -1,0 +1,65 @@
+{
+    "name": "nftsite",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "powershell -File updateversion.ps1 && vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "@walletconnect/client": "^1.7.8",
+        "@walletconnect/qrcode-modal": "^1.7.8",
+        "@walletconnect/web3-provider": "^1.7.8",
+        "animate.css": "^4.1.1",
+        "axios": "^1.3.4",
+        "clipboard": "^2.0.11",
+        "core-js": "^3.6.4",
+        "ethereumjs-util": "^7.1.5",
+        "ethers": "^5.7.2",
+        "moment": "^2.29.3",
+        "qrcodejs2": "^0.0.2",
+        "swipe": "^1.7.7",
+        "swiper": "^4.5.1",
+        "tp-js-sdk": "^3.7.5",
+        "vant": "^2.12.47",
+        "vue": "^2.6.11",
+        "vue-router": "^3.1.6",
+        "vue-video-player": "^5.0.2",
+        "vuex": "^3.1.3"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.3.1",
+        "@vue/cli-plugin-eslint": "~4.3.1",
+        "@vue/cli-plugin-router": "~4.3.1",
+        "@vue/cli-plugin-vuex": "~4.3.1",
+        "@vue/cli-service": "~4.3.1",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "less-loader": "^6.2.0",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {
+            "no-unused-vars": "off",
+            "no-unused-labels": "off"
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}

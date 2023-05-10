@@ -1,0 +1,70 @@
+.main{
+    padding-bottom: 67px;
+}
+.container{
+    padding: 20px 12px;
+}
+.page-title{
+    font-size: 24px;
+    font-weight: 800; 
+    color: #000;
+}
+.page-subtitle{
+    padding: 16px 0;
+}
+.my-btn{
+    display: inline-block;
+    padding: 12px 18px;
+    background: #0059ff;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.goods-item{
+    padding: 20px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+}
+.goods-item:last-child{
+    margin-bottom: 0;
+}
+.goods-title{
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+}
+.cell-main{
+    padding: 0 10px;
+}
+.cell-item{
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+    color: #000;
+    font-weight: 600;
+}
+.cell-item:first-child{
+    margin-top: 0;
+}
+.cell-item:last-child{
+    padding-top: 12px;
+    border-top: 1px solid #f9f9f9;
+}
+.cell-item:nth-last-child(-n+2){
+    color: #999;
+    font-weight: 400;
+}
+.cell-item.small{
+    font-size: 12px;
+}
+.cell-item .cell-name{
+    color: #999;
+    font-weight: 400;
+}
+.cell-item .cell-value{
+    flex: 1;
+    text-align: right;
+}
